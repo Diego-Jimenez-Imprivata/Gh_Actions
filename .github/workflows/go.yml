@@ -23,6 +23,7 @@ jobs:
 
     - name: Build
       run: go build main.go data.go  
+      
 
     - name: Test
       run:  go test books_test.go data.go -v
@@ -32,7 +33,14 @@ jobs:
     steps:
     - name: Get username
       run: echo displays the name
-  
+  linting:
+    runs-on: ubuntu-latest
+    steps:
+    - name: download linting tool
+      run: go get -u github.com/golangci/golangci-lint/cmd/golangci-lint
+
+    - name: execution of the linting tool
+      run: golangci-lint run ./...
 
        
     
