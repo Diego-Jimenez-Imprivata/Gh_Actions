@@ -26,3 +26,13 @@ jobs:
 
     - name: Test
       run:  go test books_test.go data.go -v
+      
+  get-info:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Get username
+      run: echo displays the name
+  
+
+       
+    
