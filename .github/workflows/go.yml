@@ -42,7 +42,7 @@ jobs:
       run: go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
 
     - name: execution of the linting tool
-      run: golangci-lint run ./...
+      run: golangci-lint run
 
        
     
