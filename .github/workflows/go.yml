@@ -12,7 +12,7 @@ on:
 jobs:
 
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
     - uses: actions/checkout@v3
 
@@ -29,12 +29,12 @@ jobs:
       run:  go test books_test.go data.go -v
       
   get-info:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
     - name: Get username
       run: echo displays the name
   linting:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
     - uses: actions/checkout@v3
     
