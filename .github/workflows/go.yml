@@ -36,6 +36,8 @@ jobs:
   linting:
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v3
+    
     - name: download linting tool
       run: go get -u github.com/golangci/golangci-lint/cmd/golangci-lint
 
